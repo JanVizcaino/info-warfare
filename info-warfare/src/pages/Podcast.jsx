@@ -3,6 +3,11 @@ import Footer from "../components/layout/Footer";
 import Section from "../components/layout/Section";
 import EpisodeCard from "../components/podcast/EpisodeCard";
 
+import ep1 from '../assets/audio/ep1.mp3'
+import ep2 from '../assets/audio/ep2.mp3'
+import ep3 from '../assets/audio/ep3.mp3'
+
+
 const EPISODES = [
   {
     id: 1,
@@ -11,7 +16,7 @@ const EPISODES = [
     description:
       "El algoritmo no tiene ideología política. Su única bandera es el engagement. Actores estatales y corporativos lo descubrieron antes que tú: inyecta el mensaje adecuado y el sistema hará el trabajo sucio. La guerra ya no se lucha con balas, se lucha con tus niveles de dopamina.",
     duration: "1:33",
-    audioSrc: "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3",
+    audioSrc: ep1,
     transcriptData: [
       { time: 0,  text: "El campo de batalla ha cambiado." },
       {
@@ -63,7 +68,7 @@ const EPISODES = [
     description:
       "Mil personas gritando la misma consigna en internet pueden ser un solo tipo ejecutando un script de Python. Las granjas de bots son infraestructuras corporativas masivas cuyo objetivo no es convencerte — es crear una falsa sensación de consenso y convertir mentiras digitales en realidad analógica.",
     duration: "1:39",
-    audioSrc: "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-3.mp3",
+    audioSrc: ep2,
     transcriptData: [
       {
         time: 0,
@@ -122,7 +127,7 @@ const EPISODES = [
     description:
       "La evidencia visual ha muerto. Con deepfakes e IA generativa, cualquiera puede fabricar un vídeo 4K de un presidente declarando la guerra. El verdadero peligro no es creer lo falso — es el dividendo del mentiroso: usar la duda para negar lo real y decidir qué es verdad.",
     duration: "1:43",
-    audioSrc: "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-2.mp3",
+    audioSrc: ep3,
     transcriptData: [
       {
         time: 0,
