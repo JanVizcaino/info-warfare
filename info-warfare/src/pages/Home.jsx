@@ -9,7 +9,7 @@ export default function Home() {
   return (
     <div className="min-h-screen flex flex-col">
       <Header />
-      <main className="flex-1 mt-32 px-6 md:px-12">
+      <main className="flex-1 mt-42 px-6 md:px-12">
         <Section>
           <h1 className="text-[12vw] leading-[0.8] font-black tracking-tighter wrap-break-word uppercase">
             La guerra <br /> ya no se <br /> lucha con <span className="text-brutal-bg" style={{ WebkitTextStroke: '2px white' }}>balas.</span>

@@ -192,7 +192,7 @@ export default function Podcast() {
   return (
     <div className="min-h-screen flex flex-col">
       <Header />
-      <main className="flex-1 mt-32 px-6 md:px-12 mb-16">
+      <main className="flex-1 mt-42 px-6 md:px-12 mb-16">
         <Section title="Base de Datos: Audio">
           <div className="flex flex-col gap-12">
             {EPISODES.map((ep) => (
