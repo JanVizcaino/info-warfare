@@ -12,7 +12,11 @@ export default function Home() {
         
         <Section>
           <h1 className="text-[12vw] leading-[0.8] font-black tracking-tighter wrap-break-word uppercase">
-            La guerra <br /> ya no se <br /> lucha con <span className="text-brutal-bg" style={{ WebkitTextStroke: '2px white' }}>balas.</span>
+            La guerra <br /> ya no se <br /> lucha con{' '}
+            <span aria-hidden="true" className="text-transparent" style={{ WebkitTextStroke: '2px white' }}>
+              balas.
+            </span>
+            <span className="sr-only text-white">balas.</span>
           </h1>
           <div className="mt-16 flex flex-col md:flex-row justify-between items-end border-t-2 border-white/20 pt-8">
             <p className="text-2xl md:text-4xl font-medium tracking-tight max-w-2xl lowercase text-white/80">
