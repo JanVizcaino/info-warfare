@@ -94,7 +94,8 @@ export default function VideoPromo({ title, videoUrl }) {
 
   useEffect(() => () => clearTimeout(hideTimeout.current), []);
 
-  const VolumeIcon = isMuted || volume === 0 ? VolumeX : volume < 0.5 ? Volume1 : Volume2;
+  const VolumeIcon =
+    isMuted || volume === 0 ? VolumeX : volume < 0.5 ? Volume1 : Volume2;
 
   return (
     <div
@@ -106,11 +107,17 @@ export default function VideoPromo({ title, videoUrl }) {
       <div
         className="absolute top-0 left-0 z-20 font-mono text-xs font-bold px-4 py-2 uppercase tracking-widest border-b border-r border-white/20 transition-colors"
         style={{
-          background: hasStarted ? "var(--color-brutal-accent, #e63946)" : "white",
+          background: hasStarted
+            ? "var(--color-brutal-accent, #e63946)"
+            : "white",
           color: hasStarted ? "white" : "black",
         }}
       >
-        {isPlaying ? "▶ EN REPRODUCCIÓN" : hasStarted ? "⏸ PAUSADO" : `ARCHIVO: ${title}`}
+        {isPlaying
+          ? "▶ EN REPRODUCCIÓN"
+          : hasStarted
+            ? "⏸ PAUSADO"
+            : `ARCHIVO: ${title}`}
       </div>
 
       <video
@@ -125,7 +132,15 @@ export default function VideoPromo({ title, videoUrl }) {
         onLoadedMetadata={handleLoaded}
         onEnded={handleEnded}
         onClick={handlePlay}
-      />
+      >
+        <track
+          kind="captions"
+          srcLang="es"
+          label="Español"
+          src="/assets/captions.vtt"
+          default
+        />
+      </video>
 
       {!hasStarted && (
         <div
@@ -162,10 +177,11 @@ export default function VideoPromo({ title, videoUrl }) {
             className="text-white hover:text-brutal-accent transition-colors cursor-pointer"
             aria-label={isPlaying ? "Pausar" : "Reproducir"}
           >
-            {isPlaying
-              ? <Pause size={18} strokeWidth={2.5} />
-              : <Play size={18} strokeWidth={2.5} />
-            }
+            {isPlaying ? (
+              <Pause size={18} strokeWidth={2.5} />
+            ) : (
+              <Play size={18} strokeWidth={2.5} />
+            )}
           </button>
 
           <span className="font-mono text-xs text-white/70 tracking-widest tabular-nums">
@@ -190,6 +206,7 @@ export default function VideoPromo({ title, videoUrl }) {
               value={isMuted ? 0 : volume}
               onChange={handleVolume}
               className="w-20 accent-brutal-accent cursor-pointer"
+              aria-label="Control de volumen"
             />
           </div>
         </div>

@@ -41,15 +41,18 @@ export default function GlobalAudioPlayer() {
           </span>
         </div>
 
-        <div className="flex items-center gap-4 font-bold uppercase tracking-widest">
+       <div className="flex items-center gap-4 font-bold uppercase tracking-widest">
           <button 
             onClick={togglePlay}
+            aria-label={isPlaying ? "Pausar audio" : "Reproducir audio"}
             className="bg-white text-black px-6 py-3 hover:bg-brutal-accent hover:text-white transition-colors"
           >
             {isPlaying ? <Pause/> : <Play/>}
           </button>
+          
           <button 
             onClick={closePlayer}
+            aria-label="Cerrar reproductor"
             className="text-white/50 hover:text-white px-4 py-3 border border-white/20 hover:border-white transition-colors"
           >
             <XIcon/>

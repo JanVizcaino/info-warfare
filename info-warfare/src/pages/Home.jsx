@@ -23,7 +23,7 @@ export default function Home() {
 
         <Section>
           <div className="flex flex-col gap-6 mt-16">
-            <h3 className="text-3xl font-black uppercase tracking-tighter">Evidencia Audiovisual</h3>
+            <h2 className="text-3xl font-black uppercase tracking-tighter">Evidencia Audiovisual</h2>
             <p className="font-mono text-sm opacity-70 mb-4">Registro visual de la campaña de desinformación. Visualización bajo tu propio riesgo.</p>
             <VideoPromo title="Teaser Documental" videoUrl={Video} />
           </div>

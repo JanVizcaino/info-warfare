@@ -14,13 +14,15 @@ export default function Header() {
     <header className="fixed top-0 w-full z-50 border-b-2 border-white/20 bg-brutal-bg/90 backdrop-blur-md">
       <nav className="flex justify-between items-center px-6 py-4">
         
-        <Link to="/" className="text-2xl font-black tracking-tighter hover:text-brutal-accent transition-colors z-50 relative">
-          <img src={logo} className="h-16 md:h-28 object-contain" alt="Logo Podcast" />
+        <Link to="/" aria-hidden="true" tabIndex="-1" className="text-2xl font-black tracking-tighter hover:text-brutal-accent transition-colors z-50 relative">
+          <img src={logo} className="h-16 md:h-28 object-contain" alt="" />
         </Link>
 
         <button 
           className="md:hidden z-50 relative p-2 text-white focus:outline-none"
           onClick={() => setIsMenuOpen(!isMenuOpen)}
+          aria-label={isMenuOpen ? "Cerrar menú" : "Abrir menú"}
+          aria-expanded={isMenuOpen}
         >
           <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             {isMenuOpen ? (
