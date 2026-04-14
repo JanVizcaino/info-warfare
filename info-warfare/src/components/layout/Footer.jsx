@@ -1,3 +1,5 @@
+import DownloadReport from '../informe/DownloadReport';
+
 export default function Footer() {
   return (
     <footer className="border-t-4 border-white mt-auto overflow-hidden bg-brutal-accent text-white py-12">
@@ -5,6 +7,7 @@ export default function Footer() {
         <div>
           <h2 className="text-[8vw] leading-none font-black tracking-tighter">FIN DE LA<br/>TRANSMISIÓN</h2>
         </div>
+        <DownloadReport />
         <div className="font-mono text-sm uppercase text-right">
           <p>© {new Date().getFullYear()} INFO:WARFARE</p>
           <p>La verdad es subjetiva.</p>
